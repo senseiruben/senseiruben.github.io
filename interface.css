@@ -1,11 +1,33 @@
-button {
-    color: white;
-    background-color: black;
-    border-color: black;
-    width: 100px;
-    height: 50px;
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(94, 93, 93);
+    background-color: rgb(145, 145, 145);
 }
+
+
+.generator {
+    border: 2px solid rgb(0, 0, 0);
+    background: rgb(192, 192, 76);
+    text-align: center;
+    width: 300px; 
+    padding: 15px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.generator-container {
+    display: flex;
+    width: 600px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#currency {
+    margin: 40px;
+    font-size: 2.2em;
+    text-align: center;
+}
+
