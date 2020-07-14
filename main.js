@@ -34,7 +34,7 @@ function buyGenerator(i) {
 
 
 function updateGUI() {
-    document.getElementById("currency").textContent = "You have $" + format(money)
+    document.getElementById("currency").textContent = "You have £" + format(money)
     for(let i = 0; i < 10; i++) {
         let g = generators[i]
         document.getElementById("gen" + (i + 1)).innerHTML = "Amount: " + format(g.amount) + "<br>Bought: " + g.bought + "<br>Mult: " + format(g.mult) + "x<br>Cost: " + format(g.cost)
