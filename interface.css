@@ -1,0 +1,11 @@
+button {
+    color: white;
+    background-color: black;
+    border-color: black;
+    width: 100px;
+    height: 50px;
+}
+
+body {
+    background-color: rgb(94, 93, 93);
+}
