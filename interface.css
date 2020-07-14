@@ -16,7 +16,13 @@ body {
     padding: 15px;
     font-size: 1.3em;
     cursor: pointer;
+    user-select: none;
 }
+
+.generator.locked {
+    background-color: rgb(201, 39, 39);
+}
+
 
 .generator-container {
     display: flex;

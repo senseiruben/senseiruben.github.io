@@ -38,6 +38,8 @@ function updateGUI() {
     for(let i = 0; i < 10; i++) {
         let g = generators[i]
         document.getElementById("gen" + (i + 1)).innerHTML = "Amount: " + format(g.amount) + "<br>Bought: " + g.bought + "<br>Mult: " + format(g.mult) + "x<br>Cost: " + format(g.cost)
+        if (g.cost > money) document.getElementById("gen" + (i + 1)).classList.add("locked")
+        else document.getElementById("gen" + (i + 1)).classList.remove("locked")
     }
 }
 
