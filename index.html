@@ -5,26 +5,57 @@
     </head>
     <body>
         <button class="mainButton" onclick="foxClick()">
-            <img class="Fox Image" src="/image.png" ondragstart="return false;">
+            <img class="Fox Image" src="/foximage.png" ondragstart="return false;">
         </button>
 
         <div class="buildings">
-            <div class="T1Fox">
-
+            <div class="buildingsTitle">
+                Foxes
             </div>
+            <button class="T1Fox" onclick="buyT1()">
+                Tier 1 Fox:<br>
+                Creates 1 Fox per second<br>
+                <span id="t1FoxCost">Cost: 10</span><br>
+                <span id="t1FoxAmount">Amount: 0</span>            
+            </button>
             <div class="T2Fox">
-
+                
             </div>
         </div>
 
     </body>
     <script>
-        var foxes=0;
-        var FoxIncrease=1;
+        var foxes = 0;
+        var FoxIncrease = 1;
+        var foxesSecond = 0;
+
+        var tickspeed = 1000;
+
+        var t1Amount = 0;
+        var t1Cost = 10;
+
         function foxClick() {
             foxes += FoxIncrease;
             document.getElementById("totalFoxes").innerHTML=foxes + " Foxes";
         }
+
+        function buyT1() {
+            if(foxes >= t1Cost){
+                foxes = foxes - t1Cost;
+                t1Amount += 1;
+                foxesSecond += 1;
+                t1Cost = Math.round(t1Cost * 1.15);
+            }
+
+            document.getElementById("t1FoxCost").innerHTML = "Cost: " + t1Cost;
+            document.getElementById("t1FoxAmount").innerHTML = "Amount: " + t1Amount;
+        }
+
+        setInterval(function foxIncrease() {
+            foxes = foxes + foxesSecond;
+            document.getElementById("totalFoxes").innerHTML = foxes + " Foxes";2
+        }, tickspeed)
+
     </script>
     <style>
         body {
@@ -43,6 +74,36 @@
             padding-left: 32px;
             padding-top: 11px;
             padding-bottom: 10px;
+        }
+        
+        .buildings {
+            background-color: rgba(221, 221, 52, 0.315);           
+            border:solid;
+            border-color: black;
+            width: 225px;
+            height: 500px;
+            margin-left: 600px;
+            margin-top: -365px;
+        }
+        
+        .buildingsTitle {
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;         
+        }
+
+        .T1Fox {
+            background-color: rgb(0, 255, 128);
+            border: solid;
+            border-color: rgba(0, 0, 0, 0.85);
+            width: 209px;
+            height: 72px;
+            margin-left: 8px;
+            margin-top: 5px;
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: 550;
+            outline: none;
         }
     </style>
 </html>
