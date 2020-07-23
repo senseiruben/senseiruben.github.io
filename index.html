@@ -4,21 +4,45 @@
         <h1 class="foxCounter"><span id="totalFoxes">0 Foxes</span></h1>
     </head>
     <body>
-        <button onclick="foxClick()">
-            <img class="Fox Image" src="https://cdn.discordapp.com/attachments/722558339892117536/735915220622508073/image.png">
+        <button class="mainButton" onclick="foxClick()">
+            <img class="Fox Image" src="/image.png" ondragstart="return false;">
         </button>
+
+        <div class="buildings">
+            <div class="T1Fox">
+
+            </div>
+            <div class="T2Fox">
+
+            </div>
+        </div>
+
     </body>
     <script>
         var foxes=0;
         var FoxIncrease=1;
         function foxClick() {
             foxes += FoxIncrease;
-            document.getElementById("totalFoxes").innerHTML=cookies + " Foxes";
+            document.getElementById("totalFoxes").innerHTML=foxes + " Foxes";
         }
     </script>
     <style>
         body {
             background-color: rgb(95, 93, 93);
+        }
+
+        .mainButton {
+            background-color: transparent;
+            border: none;
+            border-color: none;
+            outline: none;
+            padding-left: 30px;
+        }
+
+        .foxCounter {
+            padding-left: 32px;
+            padding-top: 11px;
+            padding-bottom: 10px;
         }
     </style>
 </html>
