@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <h1 class="cookieCounter"><span id="totalCookies">0 Foxes</span></h1>
+        <h1 class="foxCounter"><span id="totalFoxes">0 Foxes</span></h1>
     </head>
     <body>
-        <button onclick="cookieClick()">
-            <img class="Fox Image" src="/image.png">
+        <button onclick="foxClick()">
+            <img class="Fox Image" src="https://cdn.discordapp.com/attachments/722558339892117536/735915220622508073/image.png">
         </button>
     </body>
     <script>
-        var cookies=0;
-        var cookieIncrease=1;
-        function cookieClick() {
-            cookies += cookieIncrease;
-            document.getElementById("totalCookies").innerHTML=cookies + " Foxes";
+        var foxes=0;
+        var FoxIncrease=1;
+        function foxClick() {
+            foxes += FoxIncrease;
+            document.getElementById("totalFoxes").innerHTML=cookies + " Foxes";
         }
     </script>
     <style>
         body {
             background-color: rgb(95, 93, 93);
-        }
-        .Cookie Image {
-            Width: 100px;
-            Height: 100px;
-            size: 100px;
         }
     </style>
 </html>
