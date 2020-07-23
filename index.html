@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet"  href="interface.css">
-        <h1 style="font-size: 3em; padding-left: 5px;">Main Page</h1>
-        <title>Home Page</title>
+        <h1 class="cookieCounter"><span id="totalCookies">0 Foxes</span></h1>
     </head>
     <body>
-        <br>
-        <p style="font-size: 1.2em; padding-left: 5px;">This place isnt very organised</p>
-        <br><br><br>
-        <a class="link" style="padding-left: 5px;" href="game/gameIndex.html">Game Here!</a><br><br>
-        <a class="link" style="padding-left: 5px;" href="calculator/calculatorIndex.html">Calculator Here!</a>
-        
+        <button onclick="cookieClick()">
+            <img class="Fox Image" src="/image.png">
+        </button>
     </body>
+    <script>
+        var cookies=0;
+        var cookieIncrease=1;
+        function cookieClick() {
+            cookies += cookieIncrease;
+            document.getElementById("totalCookies").innerHTML=cookies + " Foxes";
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(95, 93, 93);
+        }
+        .Cookie Image {
+            Width: 100px;
+            Height: 100px;
+            size: 100px;
+        }
+    </style>
 </html>
