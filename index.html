@@ -1,109 +1,52 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <h1 class="foxCounter"><span id="totalFoxes">0 Foxes</span></h1>
+        <title>Document</title>
+        <link rel="stylesheet" href="interface.css">
     </head>
     <body>
-        <button class="mainButton" onclick="foxClick()">
-            <img class="Fox Image" src="/foximage.png" ondragstart="return false;">
-        </button>
 
-        <div class="buildings">
-            <div class="buildingsTitle">
-                Foxes
-            </div>
-            <button class="T1Fox" onclick="buyT1()">
-                Tier 1 Fox:<br>
-                Creates 1 Fox per second<br>
-                <span id="t1FoxCost">Cost: 10</span><br>
-                <span id="t1FoxAmount">Amount: 0</span>            
+        <div class="resources">
+            <div class="totalMeatClass"><span id="totalMeatID">0 Meat</span></div>
+            <div class="meatASecond">0 Meat per Second</div>
+            <div class="tickspeed">Tickspeed <br>1000 / 1 </div>
+        </div>
+
+        <div class="buttons">
+            <button class="meatClick" onclick="meatClick()" ondragstart="return false;">
+                Click for meat
             </button>
-            <div class="T2Fox">
-                
+            <div class="buttonupgrades">
+
             </div>
         </div>
 
+        <div class="foxes">
+            <div class="FoxTitle">
+                Foxes
+            </div>
+            <div class="Fox1">
+                Fox 1
+            </div>
+        </div>
+
+        <div class="habitats">
+            <div class="habitatTitle">
+                Habitats
+            </div>
+            <div class="habitat1">
+                Cave
+            </div>
+        </div>
+
+        <div class="upgrades">
+            <div class="upgradeTitle">
+                Upgrades
+            </div>
+            <div class="upgrade1">
+                MPS +1%
+            </div>
+        </div>
+
+        <script src="main.js"></script>
     </body>
-    <script>
-        var foxes = 0;
-        var FoxIncrease = 1;
-        var foxesSecond = 0;
-
-        var tickspeed = 1000;
-
-        var t1Amount = 0;
-        var t1Cost = 10;
-
-        function foxClick() {
-            foxes += FoxIncrease;
-            document.getElementById("totalFoxes").innerHTML=foxes + " Foxes";
-        }
-
-        function buyT1() {
-            if(foxes >= t1Cost){
-                foxes = foxes - t1Cost;
-                t1Amount += 1;
-                foxesSecond += 1;
-                t1Cost = Math.round(t1Cost * 1.15);
-            }
-
-            document.getElementById("t1FoxCost").innerHTML = "Cost: " + t1Cost;
-            document.getElementById("t1FoxAmount").innerHTML = "Amount: " + t1Amount;
-        }
-
-        setInterval(function foxIncrease() {
-            foxes = foxes + foxesSecond;
-            document.getElementById("totalFoxes").innerHTML = foxes + " Foxes";2
-        }, tickspeed)
-
-    </script>
-    <style>
-        body {
-            background-color: rgb(95, 93, 93);
-        }
-
-        .mainButton {
-            background-color: transparent;
-            border: none;
-            border-color: none;
-            outline: none;
-            padding-left: 30px;
-        }
-
-        .foxCounter {
-            padding-left: 32px;
-            padding-top: 11px;
-            padding-bottom: 10px;
-        }
-        
-        .buildings {
-            background-color: rgba(221, 221, 52, 0.315);           
-            border:solid;
-            border-color: black;
-            width: 225px;
-            height: 500px;
-            margin-left: 600px;
-            margin-top: -365px;
-        }
-        
-        .buildingsTitle {
-            font-weight: bold;
-            font-size: 1.5em;
-            text-align: center;         
-        }
-
-        .T1Fox {
-            background-color: rgb(0, 255, 128);
-            border: solid;
-            border-color: rgba(0, 0, 0, 0.85);
-            width: 209px;
-            height: 72px;
-            margin-left: 8px;
-            margin-top: 5px;
-            text-align: center;
-            font-size: 0.9em;
-            font-weight: 550;
-            outline: none;
-        }
-    </style>
 </html>
