@@ -1,0 +1,237 @@
+/* general stuff */
+body{
+  background-color: rgb(121, 213, 243);
+  justify-content: left;
+  display: flex;
+  font-size: 18px;
+
+
+}
+
+button{
+  background-color: pink;
+  padding: 10px;
+  width: 110px;
+  margin-left: 5px;
+
+}
+
+#hideBack {
+  border: 0px;
+  background-color: rgba(255, 0, 0,0);
+  width:100%;
+  height:100%;
+  font-size: 18px;
+}
+
+#game{
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+
+  
+}
+/* Switch tab stuff */
+#tabs{
+  width:100px;
+  height:750px;
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right:0px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#mainTabAccess{
+  width:90px;
+  height:90px;
+  background-color: rgb(207, 123, 123);
+  margin: 4px;
+  border: 1px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#settingsAccess{
+  width:90px;
+  height:90px;
+  background-color: rgb(148, 148, 148);
+  margin: 4px;
+  border: 1px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ascendAccess{
+  width:90px;
+  height:90px;
+  background-color:rgb(12, 144, 221);
+  margin: 4px;
+  border: 1px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#adminAccess{
+  width:90px;
+  height:90px;
+  background-color:rgb(192, 9, 9);
+  margin: 4px;
+  border: 1px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+
+/* MainTab stuff */
+#mainTab{
+  background-color: rgb(207, 123, 123);
+  width: 1000px;
+  height: 600px;
+  border: 2px solid black;
+  margin-left:250px;
+  position: relative;
+
+}
+
+#currency{
+  width:1000px;
+  height: 50px;
+  border-bottom: 2px solid black;
+  align-items: center;
+  
+  display:flex;
+  flex-direction: row;
+}
+
+#meat{
+  padding: 15px;
+  padding-left: 100px;
+  display: flex;
+
+}
+
+#gems{
+  padding: 15px;
+  padding-left: 100px;
+  display: none;
+
+
+}
+
+#generatorBuy{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+#gen1, #gen2, #gen3, #gen4 {
+  padding: 10px;
+  border: 1px solid black;
+  height: 300px;
+  width: 180px;
+  align-items: center;
+  flex-direction: column;
+  display:flex;
+  position: relative;
+}
+
+#droneAmount, #nestAmount, #queenAmount, #greaterQueenAmount {
+  position: absolute;
+  bottom: 10px;
+}
+
+#gen1Cost, #gen2Cost, #gen3Cost, #gen4Cost {
+  margin-top: 20px;
+}
+
+#buyGen {
+  width:150px;
+  height:60px;
+}
+
+#multiBuy {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 340px;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  
+  margin:10px;
+}
+
+#oneBuy, #tenBuy, #hundredBuy, #maxBuy {
+  height: 60px;
+  width:70px;
+  background-color:rgb(20, 162, 197);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  font-size: 18px;
+}
+
+#oneBuy {
+  background-color:rgb(130, 226, 250)
+}
+
+
+
+
+/* settings tab stuff */
+
+#settingsTab {
+  display:none;
+  background-color: rgb(190, 185, 185);
+  width: 1000px;
+  height: 400px;
+  border: 2px solid black;
+  margin-left:250px;
+}
+
+#settingsHeader {
+  width: 100%;
+  height: 30px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#settingsRow1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#backgroundColorSwitch {
+  border: 2px solid black;
+  background-color: gray;
+  margin-left: 10px;
+}
+
+/* admin tab stuff */
+
+#adminTab {
+  display:none;
+  background-color: rgb(190, 185, 185);
+  width: 1000px;
+  height: 400px;
+  border: 2px solid black;
+  margin-left:250px;
+  
+}

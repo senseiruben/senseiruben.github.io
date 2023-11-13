@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>game yes yes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="game">
+      <div id="tabs">
+        <div id="mainTabAccess">
+          <button id="hideBack" onclick="openMain()">Main</label>
+        </div>
+        <div id="ascendAccess">
+          <button id="hideBack">Locked</label>
+        </div>
+        <div id="settingsAccess">
+          <button id="hideBack" onclick="openSettings()">Settings</label>
+        </div>
+        <div id="adminAccess">
+          <button id="hideBack" onclick="openAdmin()">Admin</button>
+        </div>
+      </div>
+      <div id="mainTab">
+        <div id="currency">
+            <label id="meat">Meat: 10</label>
+            <label id="gems">Gems: 0</label>
+        </div>
+
+        <div id="generatorBuy">
+          <div id="gen1">
+            <button onclick="buyDrone()" id="buyGen">Buy drone</button>
+            <label id="gen1Cost">Drone cost 10 Meat</label>
+            <label id="droneAmount">Drones: 0</label>
+          </div>
+          <div id="gen2">
+            <button onclick="buyQueen()" id="buyGen">Buy Queen</button>
+            <label id="gen2Cost">Queen cost 100 Drones</label>
+            <label id="queenAmount">Queens: 0</label>
+          </div>
+          <div id="gen3">
+            <button onclick="buyNest()" id="buyGen">Buy Nest</button>
+            <label id="gen3Cost">Nest cost 1000 Queens</label>
+            <label id="nestAmount">Nests: 0</label>
+          </div>
+          <div id="gen4">
+            <button onclick="buyGreaterQueen()" id="buyGen">Buy Greater Queen</button>
+            <label id="gen4Cost">Greater Queen cost 10000 Nests</label>
+            <label id="greaterQueenAmount">Greater Queens: 0</label>
+          </div>
+        </div>
+        <div id="multiBuy">
+          <button onclick="oneTimesBuy()" id="oneBuy">1x</button>
+          <button onclick="tenTimesBuy()" id="tenBuy">10x</button>
+          <button onclick="hundredTimesBuy()" id="hundredBuy">100x</button>
+          <button onclick="maxBuys()" id="maxBuy">Buy Max</button>
+        </div>
+      </div>
+      <div id="ascendTab">
+
+      </div>
+      <div id="settingsTab">
+        <div>
+          <h1 id="settingsHeader">Version 0.0</h>
+        </div>
+        <div id="settingsRow1">
+          <button onclick="changeBackground()" id="backgroundColorSwitch">Background Colour</button>
+          <button>test</button>
+          <button>test</button>
+          <button>test</button>
+        </div>        
+      </div>
+      <div id="adminTab">
+        <input id="giveMeat" value="">
+        <button onclick="givetroop(document.getElementById('giveMeat'))">Give meat</button>
+        <input id="giveDrone" value="">
+        <button onclick="givetroop(document.getElementById('giveDrone'))">Give drone</button>
+        <input id="giveQueen" value="">
+        <button onclick="givetroop(document.getElementById('giveQueen'))">Give queen</button>
+        <input id="giveNest" value="">
+        <button onclick="givetroop(document.getElementById('giveNest'))">Gives nest</button>
+        <input id="giveGQueen" value="">
+        <button onclick="givetroop(document.getElementById('giveGQueen'))">Gives greater queen</button>
+
+      </div>
+    </div>
+  </body>
+</html>
